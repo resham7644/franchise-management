@@ -25,7 +25,7 @@ export default function SettingsComponent() {
 
     if (formData.has('name') || formData.has('password') || formData.has('pic')) {
       try {
-        const resp = await axios.put(`http://localhost:2004/user/update/${user.id}`, formData, {
+        const resp = await axios.put(`https://franchise-backend-jr02.onrender.com/user/update/${user.id}`, formData, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
           }

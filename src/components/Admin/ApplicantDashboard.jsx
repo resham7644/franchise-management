@@ -9,7 +9,7 @@ const ApplicantDashboard = () => {
 
   // Fetch data from API
   function fetchApplications() {
-    axios.get("http://localhost:2004/form/allapplicants")
+    axios.get("https://franchise-backend-jr02.onrender.com/form/allapplicants")
       .then((response) => {
         setItems(response.data);
       })
@@ -28,10 +28,10 @@ const ApplicantDashboard = () => {
   
       try {
         let url = "";
-        if (action === "accept") url = "http://localhost:2004/form/accept";
-        else if (action === "reject") url = "http://localhost:2004/form/reject";
-        else if (action === "delete") url = "http://localhost:2004/form/delete";
-        else if (action === "decline") url = "http://localhost:2004/form/decline";
+        if (action === "accept") url = "https://franchise-backend-jr02.onrender.com/form/accept";
+        else if (action === "reject") url = "https://franchise-backend-jr02.onrender.com/form/reject";
+        else if (action === "delete") url = "https://franchise-backend-jr02.onrender.com/form/delete";
+        else if (action === "decline") url = "https://franchise-backend-jr02.onrender.com/decline";
         else if (action === "franchise") {
           url = "http://localhost:2004/form/franchise";
           doFranchise(id);

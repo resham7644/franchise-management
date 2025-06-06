@@ -8,7 +8,7 @@ const EmployeeDropdown = ({ selected, onChange }) => {
    const { user } = useAuth();
 
   useEffect(() => {
-    axios.get(`http://localhost:2004/employee/fetchall/${user.id}`, {
+    axios.get(`https://franchise-backend-jr02.onrender.com/employee/fetchall/${user.id}`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }

@@ -21,10 +21,10 @@ const AdminHome = () => {
         const token = localStorage.getItem("token");
 
         const [applicationsRes, usersRes] = await Promise.all([
-          axios.get("http://localhost:2004/form/allapplicants", {
+          axios.get("https://franchise-backend-jr02.onrender.com/form/allapplicants", {
             headers: { Authorization: `Bearer ${token}` },
           }),
-          axios.get("http://localhost:2004/user/fetchall", {
+          axios.get("https://franchise-backend-jr02.onrender.com/user/fetchall", {
             headers: { Authorization: `Bearer ${token}` },
           }),
         ]);

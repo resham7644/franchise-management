@@ -26,7 +26,7 @@ export default function DailySales() {
         ...formData,
         uploadedBy: user.id,
       };
-      await axios.post('http://localhost:2004/sales/upload', payload);
+      await axios.post('https://franchise-backend-jr02.onrender.com/sales/upload', payload);
       alert('Sales entry uploaded successfully');
       setFormData({ date: '', product: '', employee: '', quantity: '', totalAmount: '' });
     } catch (error) {

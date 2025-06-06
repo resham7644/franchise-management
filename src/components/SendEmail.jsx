@@ -1,4 +1,5 @@
 import emailjs from '@emailjs/browser'
+require('dotenv').config();
 
 const sendEmail = async (userData) => {
   if (!userData.email) {
@@ -11,8 +12,8 @@ const sendEmail = async (userData) => {
     to_name: userData.name || "User",
     subject: userData.subject || "No Subject",
     message: userData.subject || "No message provided",
-    company_name: 'GrowPulse',
-    company_url: 'https://growpulse.com',
+    company_name: 'Franchise Flow',
+    company_url: 'https://franchiseflow.com',
     support_email: 'support@franchiseflow.com',
     current_year: new Date().getFullYear(),
   };
@@ -22,9 +23,9 @@ const sendEmail = async (userData) => {
   try {
     const result = await emailjs.send(
       'service_resham',      // Your EmailJS Service ID
-      'template_csoiq6l',    // Your EmailJS Template ID
+      process.env.TEMPL_ID,    // Your EmailJS Template ID
       templateParams,
-      'EPRRWVTb-kK39-BrD'   // Your EmailJS Public Key
+      process.env.EMAIL_KEY   // Your EmailJS Public Key
     );
 
     console.log('Email sent successfully:', result.text);

@@ -10,7 +10,7 @@ function AdminUserMang() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await axios.get("http://localhost:2004/user/fetchall");
+        const res = await axios.get("https://franchise-backend-jr02.onrender.com/user/fetchall");
         setUsers(res.data);
       } catch (err) {
         setError("Failed to load users. Please try again.");

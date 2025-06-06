@@ -42,7 +42,7 @@ const Charts = () => {
   useEffect(() => {
     const fetchSales = async () => {
       try {
-        const res = await axios.get(`http://localhost:2004/sales/fetchall/${user.id}`, {
+        const res = await axios.get(`https://franchise-backend-jr02.onrender.com/sales/fetchall/${user.id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
           }

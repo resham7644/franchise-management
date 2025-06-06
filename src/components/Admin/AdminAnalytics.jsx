@@ -15,8 +15,8 @@ function AdminAnalytics() {
     const fetchStats = async () => {
       try {
         const [userRes, appRes] = await Promise.all([
-          axios.get("http://localhost:2004/user/fetchall"),
-          axios.get("http://localhost:2004/form/allapplicants")
+          axios.get("https://franchise-backend-jr02.onrender.com/user/fetchall"),
+          axios.get("https://franchise-backend-jr02.onrender.com/form/allapplicants")
         ]);
         setUsers(userRes.data);
         setApplications(appRes.data);

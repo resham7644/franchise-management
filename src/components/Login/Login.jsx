@@ -25,7 +25,7 @@ export default function Login() {
     }
 
     try {
-      let url = "http://localhost:2004/user/login";
+      let url = "https://franchise-backend-jr02.onrender.com/user/login";
       let data = { email: userId, password: password };
       let resp = await axios.post(url, data);
 

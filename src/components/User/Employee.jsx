@@ -15,7 +15,7 @@ export default function Employee() {
 
   const fetchEmployees = async (req,resp) => {
     try {
-        const res = await axios.get(`http://localhost:2004/employee/fetchall/${user.id}`, {
+        const res = await axios.get(`https://franchise-backend-jr02.onrender.com/employee/fetchall/${user.id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
           }
@@ -37,7 +37,7 @@ export default function Employee() {
       console.log(payload)
     if (!name || !role || !contact) return alert('Please fill all fields');
     try {
-      await axios.post('http://localhost:2004/employee/save', payload,{
+      await axios.post('https://franchise-backend-jr02.onrender.com/employee/save', payload,{
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`
         }
@@ -57,7 +57,7 @@ export default function Employee() {
 
   const handleUpdate = async (id) => {
     try {
-      await axios.put(`http://localhost:2004/employee/${id}`, editForm,{
+      await axios.put(`https://franchise-backend-jr02.onrender.com/employee/${id}`, editForm,{
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`
         }
@@ -71,7 +71,7 @@ export default function Employee() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:2004/employee/delete/${id}`,{
+      await axios.delete(`https://franchise-backend-jr02.onrender.com/employee/delete/${id}`,{
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`
         }

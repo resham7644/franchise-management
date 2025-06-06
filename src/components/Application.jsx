@@ -31,7 +31,7 @@ function Application() {
     async function doSaveApplication() {
         setIsSubmitting(true);
         console.log(obj);
-        let url = "http://localhost:2004/form/saveapplication";
+        let url = "https://franchise-backend-jr02.onrender.com/form/saveapplication";
         let fd = new FormData();
         for (let prop in obj) {
             fd.append(prop, obj[prop]);

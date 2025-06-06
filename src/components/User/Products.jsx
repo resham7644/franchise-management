@@ -15,7 +15,7 @@ export default function Products() {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get(`http://localhost:2004/product/fetchall/${user.id}`, {
+      const res = await axios.get(`https://franchise-backend-jr02.onrender.com/product/fetchall/${user.id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -34,7 +34,7 @@ export default function Products() {
     };
     if (!formData.name || !formData.code || !formData.price) return alert('Please fill all fields');
     try {
-      await axios.post('http://localhost:2004/product/save', payload, {
+      await axios.post('https://franchise-backend-jr02.onrender.com/product/save', payload, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -54,7 +54,7 @@ export default function Products() {
 
   const handleUpdate = async (id) => {
     try {
-      await axios.put(`http://localhost:2004/product/${id}`, editForm, {
+      await axios.put(`https://franchise-backend-jr02.onrender.com/product/${id}`, editForm, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -68,7 +68,7 @@ export default function Products() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:2004/product/delete/${id}`, {
+      await axios.delete(`https://franchise-backend-jr02.onrender.com/product/delete/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },

@@ -8,7 +8,7 @@ export default function ProductDropdown({ value, onChange }) {
   const { user } = useAuth();
   
   useEffect(() => {
-    axios.get(`http://localhost:2004/product/fetchall/${user.id}`, {
+    axios.get(`https://franchise-backend-jr02.onrender.com/product/fetchall/${user.id}`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }
